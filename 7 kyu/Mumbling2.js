@@ -6,16 +6,7 @@
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
+
 function accum(s) {
-	// your code
-  const lowerCaseString = s.toLowerCase()
-  let result = []
-
-  for (let i = 0; i < lowerCaseString.length; i++) {
-    let repeatedChars = lowerCaseString[i].toUpperCase() + lowerCaseString[i].repeat(i)
-    
-    result.push(repeatedChars)
-  }
-
-  return result.join('-')
+	return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
 }
