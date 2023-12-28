@@ -125,3 +125,16 @@ function reverseString(str){
     return str.split('').reverse().join('')
 }
 console.log(reverseString("hello"))
+
+
+
+
+
+//12. you must take an input string, reverse the order of the words, and reverse the order of the letters within the words.
+
+
+function String(str){
+    return str.split(' ').map(word => word.split('').reverse().join('')).reverse().join(' ')
+ }
+
+console.log(String('Hello World !'))
