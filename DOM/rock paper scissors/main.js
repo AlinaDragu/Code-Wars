@@ -4,6 +4,8 @@ document.getElementById('scissors').addEventListener('click', () => playGame('sc
 
 
 const choices = ['rock', 'paper', 'scissors'];
+let playerScore = 0;
+let computerScore = 0;
 
 function computerChoice() {
   const random = Math.floor(Math.random() * choices.length);
@@ -12,14 +14,14 @@ function computerChoice() {
 
 function theWinner(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
-    return 'Its a tie';
+    return 'It\'s a tie';
   } else if (
     (playerChoice === 'rock' && computerChoice === 'scissors') ||
     (playerChoice === 'paper' && computerChoice === 'rock') ||
     (playerChoice === 'scissors' && computerChoice === 'paper')
-  ) {
+  ) { playerScore++;
     return 'You Won!';
-  } else {
+  } else { computerScore++; 
     return 'You lost!';
   }
 }
@@ -28,5 +30,5 @@ function playGame(playerChoice) {
   const compChoice = computerChoice();
   const result = theWinner(playerChoice, compChoice);
   document.getElementById('result').innerText = `You = ${playerChoice}. Computer = ${compChoice}. The result is that ${result}`;
+  document.getElementById('score').innerText = `Score: Player ${playerScore} - Computer ${computerScore}`;
 }
-
