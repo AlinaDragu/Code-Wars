@@ -1,0 +1,51 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  section {
+    margin-top: 200px;
+    color: rgb(159, 10, 10);
+    font-size: 30px;
+  }
+
+  .choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #rock , 
+  #paper,
+  #scissors {
+    margin-top: 50px;
+    font-size: 30px;
+    background-color: rgb(178, 114, 208);
+    border-radius: 10px;
+  }
+
+  h1 {
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(167, 59, 218);
+  }
+
+ 
