@@ -403,3 +403,14 @@ console.log(sheep([true,false,true,false,true,true,true,false,false,true]))
 function smash (words) {
     return words.splice(' ').slice().join(' ')     // or return words.join(' ')
  }
+
+
+//  //27. Simple, given a string of words, return the length of the shortest word(s).
+
+// // String will never be empty and you do not need to account for different data types.
+
+
+function findShort(s){
+    let words = s.split(' ').map((word) => word.length)
+    return Math.min(...words)
+}
