@@ -1,4 +1,16 @@
+
 const container = document.getElementById('container');
+const button = document.createElement('button');
+button.textContent = 'Generate Colors';
+button.addEventListener('click', () => {
+    enableMultiColorHoverEffect();
+});
+button.classList.add('btn');
+
+document.body.appendChild(button);
+
+let initialColor = 'rgb(56, 5, 127)';
+let multiColorHoverEnabled = false;
 
 function createGrid(rows, cols) {
     for (let i = 0; i < rows * cols; i++) {
@@ -7,26 +19,47 @@ function createGrid(rows, cols) {
         container.appendChild(square);
     }
 }
- 
+
 function getRandomColor() {
-    let r = Math.floor(Math.random() *256)
-    let g = Math.floor(Math.random() *256)
-    let b = Math.floor(Math.random() *256)
-    return `rgb(${r},${g},${b})`
-
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
 }
 
-function handleHover(e) {
-    const randomColor = getRandomColor();
-    e.target.style.backgroundColor = randomColor;
+function handleInitialHover(e) {
+    if (e.target.style.backgroundColor !== initialColor) {
+        e.target.style.backgroundColor = initialColor;
+    }
 }
 
-function addHoverEffect() {
+function handleMultiColorHover(e) {
+    if (multiColorHoverEnabled) {
+        const randomColor = getRandomColor();
+        e.target.style.backgroundColor = randomColor;
+    }
+}
+
+function enableInitialHoverEffect() {
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
-        square.addEventListener('mouseover', handleHover);
+        square.addEventListener('mouseover', handleInitialHover);
     });
 }
 
+function enableMultiColorHoverEffect() {
+    multiColorHoverEnabled = true;
+    enableInitialHoverEffect();
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.addEventListener('mouseover', handleMultiColorHover);
+    });
+}
+
+function generateColors() {
+    initialColor = 'rgb(56, 5, 127)';
+    enableInitialHoverEffect();
+}
+
 createGrid(16, 16);
-addHoverEffect();
+enableInitialHoverEffect();
