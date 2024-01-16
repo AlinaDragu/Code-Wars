@@ -3,7 +3,7 @@ const container = document.getElementById('container');
 const button = document.createElement('button');
 button.textContent = 'Generate Colors';
 button.addEventListener('click', () => {
-    enableMultiColorHoverEffect();
+    toggleColorEffect();
 });
 button.classList.add('btn');
 
@@ -11,6 +11,7 @@ document.body.appendChild(button);
 
 let initialColor = 'rgb(56, 5, 127)';
 let multiColorHoverEnabled = false;
+let clickCount = 0;
 
 function createGrid(rows, cols) {
     for (let i = 0; i < rows * cols; i++) {
@@ -40,26 +41,28 @@ function handleMultiColorHover(e) {
     }
 }
 
-function enableInitialHoverEffect() {
-    const squares = document.querySelectorAll('.square');
-    squares.forEach(square => {
-        square.addEventListener('mouseover', handleInitialHover);
-    });
+function toggleColorEffect() {
+    clickCount++;
+    if (clickCount === 2) {
+        multiColorHoverEnabled = false;
+        clickCount = 0;
+    } else {
+        multiColorHoverEnabled = true;
+    }
+    enableHoverEffect();
 }
 
-function enableMultiColorHoverEffect() {
-    multiColorHoverEnabled = true;
-    enableInitialHoverEffect();
+function enableHoverEffect() {
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
-        square.addEventListener('mouseover', handleMultiColorHover);
+        square.addEventListener('mouseover', multiColorHoverEnabled ? handleMultiColorHover : handleInitialHover);
     });
 }
 
 function generateColors() {
     initialColor = 'rgb(56, 5, 127)';
-    enableInitialHoverEffect();
+    enableHoverEffect();
 }
 
 createGrid(16, 16);
-enableInitialHoverEffect();
+enableHoverEffect();
