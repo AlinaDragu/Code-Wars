@@ -9,7 +9,7 @@ button.classList.add('btn');
 
 document.body.appendChild(button);
 
-let initialColor = 'rgb(56, 5, 127)';
+let initialColor = 'rgb(0, 0, 0)';
 let multiColorHoverEnabled = false;
 let clickCount = 0;
 
@@ -60,7 +60,7 @@ function enableHoverEffect() {
 }
 
 function generateColors() {
-    initialColor = 'rgb(56, 5, 127)';
+    initialColor = 'rgb(0, 0, 0)';
     enableHoverEffect();
 }
 
