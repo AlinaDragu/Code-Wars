@@ -9,16 +9,16 @@
     }
    createGrid(16, 16);
 
+   function handleHover(e) {
+    e.target.classList.add('active');
+}
 
-    function handleHover(e) {
-        e.target.classList.add('hovered');
-    }
+function addHoverEffect() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.addEventListener('mouseover', handleHover);
+        square.style.backgroundColor = ''; // Set the initial background color to transparent
+    });
+}
 
-    function addHoverEffect() {
-        const squares = document.querySelectorAll('.square');
-        squares.forEach(square => {
-            square.addEventListener('mouseover', handleHover);
-        });
-    }
-
-    addHoverEffect();
+addHoverEffect();

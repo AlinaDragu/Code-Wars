@@ -39,9 +39,12 @@ body {
 .square {
     width: 40px;
     height: 40px;
-    border: 1px solid #ddd;
     box-sizing: border-box;
-    transition: background-color 0.3s ease-in-out;
+   
+}
+
+.square.active {
+    background-color: rgb(56, 5, 127);
 }
 
 .square:hover {
