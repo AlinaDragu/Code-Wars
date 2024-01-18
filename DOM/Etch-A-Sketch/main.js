@@ -66,3 +66,6 @@ function generateColors() {
 
 createGrid(16, 16);
 enableHoverEffect();
+
+
+
