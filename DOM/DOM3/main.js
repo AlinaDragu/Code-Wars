@@ -57,3 +57,6 @@ let salaries = {
   }
   
   alert(sum)
+
+
+  
