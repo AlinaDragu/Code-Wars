@@ -89,3 +89,4 @@ function multiplyNumeric(obj) {
     }
   }
 }
+
