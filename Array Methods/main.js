@@ -87,3 +87,17 @@ arr3.sort((a,b) => b - a)
  alert( arr3 ); // 8, 5, 2, 1, -10
 
 
+//5.We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+// Create a function copySorted(arr) that returns such a copy.
+function copySorted(arr4) {
+  return arr4.slice().sort()
+}
+
+let arr4 = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr4 ); // HTML, JavaScript, CSS (no changes)
+
