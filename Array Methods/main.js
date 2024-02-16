@@ -169,6 +169,8 @@ let names = users.map(item => item.name)/* ... your code */
 
 alert( names ); // John, Pete, Mary
 
+
+
 //8.You have an array of user objects, each one has name, surname and id.
 
 // Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
@@ -196,3 +198,24 @@ usersMapped = [
 
 alert( usersMapped[0].id ) // 1
 alert( usersMapped[0].fullName ) // John Smith
+
+
+//9.Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+// For instance:
+function sortByAge(arr5) {
+  arr5.sort((a, b) => a.age - b.age);
+}
+
+let john3 = { name: "John", age: 25 };
+let pete3 = { name: "Pete", age: 30 };
+let mary3 = { name: "Mary", age: 28 };
+
+let arr5 = [ pete3, john3, mary3 ];
+
+sortByAge(arr3);
+
+// now: [john, mary, pete]
+alert(arr5[0].name); // John
+alert(arr5[1].name); // Mary
+alert(arr5[2].name); // Pete
