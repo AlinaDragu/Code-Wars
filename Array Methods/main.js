@@ -241,3 +241,22 @@ shuffle(arr6);
 // arr = [3, 1, 2]
 // ...
 // All element orders should have an equal probability. For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
+
+
+//11.Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+
+// The formula for the average is (age1 + age2 + ... + ageN) / N.
+
+// For instance:
+
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+
+let john4 = { name: "John", age: 25 };
+let pete4 = { name: "Pete", age: 30 };
+let mary4 = { name: "Mary", age: 29 };
+
+let arr7 = [ john4, pete4, mary4 ];
+
+alert( getAverageAge(arr7) ); // (25 + 30 + 29) / 3 = 28
