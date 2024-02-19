@@ -260,3 +260,29 @@ let mary4 = { name: "Mary", age: 29 };
 let arr7 = [ john4, pete4, mary4 ];
 
 alert( getAverageAge(arr7) ); // (25 + 30 + 29) / 3 = 28
+
+
+//12.Let arr be an array.
+
+// Create a function unique(arr) that should return an array with unique items of arr.
+
+// For instance:
+
+function unique(arr8) {
+  /* your code */
+  let result = [];
+
+  for (let str of arr8) {
+    if (!result.includes(str)) {
+      result.push(str);
+    }
+  }
+
+  return result;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+alert( unique(strings) ); // Hare, Krishna, :-O
