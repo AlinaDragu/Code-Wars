@@ -6,7 +6,6 @@
 
 // Good luck!
 
-
 function capitalize(s){
   let evenIndexStr = '';
  let oddIndexStr = '';
