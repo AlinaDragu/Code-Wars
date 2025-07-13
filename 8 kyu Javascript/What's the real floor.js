@@ -15,7 +15,6 @@
 // 15  =>  13
 // -3  =>  -3
 
-
 function getRealFloor(n) {
     if (n <= 0) {
       return n
