@@ -10,7 +10,6 @@
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-
 function duplicateCount(text){
 
   text = text.toLowerCase()
