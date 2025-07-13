@@ -10,3 +10,5 @@
 def number_to_string(num):
      # Return a string of the number here!
     return str(num)
+
+print(repr(number_to_string(34))) #returns a string representation of an object that looks like you'd type it in code
