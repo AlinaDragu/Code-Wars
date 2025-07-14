@@ -2,3 +2,8 @@
 
 # 'world'  =>  'dlrow'
 # 'word'   =>  'drow'
+
+def solution(string):
+    return string[::-1]
+
+print(solution('classy'))
