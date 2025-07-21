@@ -4,3 +4,9 @@
 # Examples (input -> output)
 # 6, "I"     -> "IIIIII"
 # 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+def repeat_str(repeat, string):
+    return repeat * string
+
+print(repeat_str(45,'I'))
+print(repeat_str(57,'Hello'))
