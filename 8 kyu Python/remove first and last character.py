@@ -15,3 +15,7 @@ def remove_char(s):
     #your code here
     return s[1:-1]
 
+print(remove_char('eloquent'))
+print(remove_char('es'))
+print(remove_char('srb'))
+print(remove_char('monkey'))
