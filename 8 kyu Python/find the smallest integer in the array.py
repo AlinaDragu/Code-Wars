@@ -14,3 +14,4 @@ def find_smallest_int(arr):
     return smallest  
 
 print(find_smallest_int([34,-2,-1,34,667,67]))
+print(find_smallest_int([34,22,23,34,667,67]))
