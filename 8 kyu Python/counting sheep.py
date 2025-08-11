@@ -20,3 +20,4 @@ def count_sheeps(sheep):
             count += 1
     return count
        
+print(count_sheeps([True,True,False,True,False]))
