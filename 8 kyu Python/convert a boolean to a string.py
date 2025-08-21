@@ -9,8 +9,8 @@ def boolean_to_string(b):
     else:
         return 'False'
     
-def boolean_to_string(b):
-    return repr(str(b)) 
+def boolean_to_string(b):   # <-- if you want the terminal to show the exact 'True' 
+    return repr(str(b))    
     
 print(boolean_to_string(True))
 
