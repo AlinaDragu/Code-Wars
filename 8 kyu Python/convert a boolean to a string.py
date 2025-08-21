@@ -8,3 +8,9 @@ def boolean_to_string(b):
         return 'True'
     else:
         return 'False'
+    
+def boolean_to_string(b):
+    return repr(str(b)) 
+    
+print(boolean_to_string(True))
+
