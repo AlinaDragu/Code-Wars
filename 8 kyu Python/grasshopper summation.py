@@ -5,3 +5,10 @@
 # 2 -> 3 (1 + 2)
 # 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
+def summation(num):
+    result = 0
+    for i in range(1,num+1):
+        result += i
+    return result
+    
+print(summation(4))
