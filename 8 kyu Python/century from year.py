@@ -9,3 +9,7 @@
 # 1601 --> 17
 # 2000 --> 20
 # 2742 --> 28
+
+def century(year):
+    # Finish this :)
+    return int((year-1)/100) +1
