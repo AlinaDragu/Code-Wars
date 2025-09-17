@@ -13,3 +13,9 @@
 def century(year):
     # Finish this :)
     return int((year-1)/100) +1
+
+print(century(18))
+print(century(192))
+print(century(1928))
+print(century(1989))
+print(century(2090))
