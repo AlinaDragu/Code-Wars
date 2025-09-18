@@ -16,3 +16,10 @@
 # You can assume that you are only given numbers.
 # You cannot assume the size of the array.
 # You can assume that you do get an array and if the array is empty, return 0.
+
+def sum_array(a):
+    total = 0
+    for number in a:
+        total += number
+    return total
+    
