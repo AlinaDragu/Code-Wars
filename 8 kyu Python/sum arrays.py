@@ -23,3 +23,7 @@ def sum_array(a):
         total += number
     return total
     
+print(sum_array([2,3,4,5,6]))
+print(sum_array([2,-3,4.2,0,6]))
+print(sum_array([0]))
+print(sum_array([-2.346]))
